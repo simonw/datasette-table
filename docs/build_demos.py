@@ -4,18 +4,13 @@ import subprocess
 
 
 index_re = re.compile(r"<!\-\- list-starts \-\->.*?<!\-\- list-ends \-\->", re.DOTALL)
-current_re = re.compile(r"<!\-\- current-starts \-\->.*?<!\-\- current-ends \-\->", re.DOTALL)
 
 dir = pathlib.Path(__file__).parent
 
 
 def get_tags():
     output = subprocess.check_output(["git", "tag"]).decode("utf-8")
-    tags = [
-        l.strip()
-        for l in output.split("\n")
-        if l.strip()
-    ]
+    tags = [l.strip() for l in output.split("\n") if l.strip()]
     tags.sort(key=lambda t: tuple(map(int, t.split("."))), reverse=True)
     return tags
 
@@ -31,18 +26,13 @@ def build_list(tags):
 
 if __name__ == "__main__":
     tags = get_tags()
-    current = tags[0]
     index = dir / "index.html"
     index_contents = index.open().read()
     rewritten = index_re.sub(build_list(tags), index_contents)
-    rewritten = current_re.sub(current, rewritten)
-    rewritten = rewritten.replace("{version}", current)
     index.write_text(rewritten, "utf-8")
     # Write out a file per version
     template = (dir / "_template.html").read_text()
     for tag in tags:
-        content = template.replace(
-            "{version}", tag
-        )
+        content = template.replace("{version}", tag)
         version_file = dir / "{}.html".format(tag)
         version_file.write_text(content, "utf-8")
