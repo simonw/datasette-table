@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>datasette-table {version} demo</title>
+  <style>
+    body {
+      font-family: helvetica;
+      max-width: 60ch;
+    }
+  </style>
+  <script type="module" src="https://cdn.skypack.dev/datasette-table@{version}"></script>
+</head>
+<body>
+<h1>datasette-table {version}</h1>
+
+<datasette-table
+  url="https://covid-19.datasettes.com/covid/ny_times_us_counties.json?_size=100"
+></datasette-table>
+
+</body>
+</html>
