@@ -1,5 +1,7 @@
 # datasette-table
 
+[![npm](https://img.shields.io/npm/v/datasette-table)](https://www.npmjs.com/package/datasette-table)
+
 A (highly experimental) Web Component for embedding a [Datasette](https://datasette.io/) table on a page.
 
 ## Usage
