@@ -1,0 +1,30 @@
+{
+  "author": "Simon Willison (https://simonwillison.net/)",
+  "name": "datasette-table",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A Web Component for embedding Datasette tables on a page",
+  "main": "datasette-table.js",
+  "module": "datasette-table.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "lit": "^2.0.0"
+  },
+  "devDependencies": {
+    "vite": "^2.6.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonw/datasette-table.git"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/simonw/datasette-table/issues"
+  },
+  "homepage": "https://github.com/simonw/datasette-table#readme"
+}
