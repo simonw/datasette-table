@@ -4,6 +4,10 @@
 
 A (highly experimental) Web Component for embedding a [Datasette](https://datasette.io/) table on a page.
 
+## Demo
+
+Visit [https://simonw.github.io/datasette-table/](https://simonw.github.io/datasette-table/) for a demo of this component.
+
 ## Usage
 
 ```html
