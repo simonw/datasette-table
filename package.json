@@ -13,10 +13,10 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "lit": "^2.0.0"
+    "lit": "^2.2.7"
   },
   "devDependencies": {
-    "vite": "^2.6.4"
+    "vite": "^3.0.0"
   },
   "repository": {
     "type": "git",
